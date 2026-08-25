@@ -142,3 +142,85 @@
     color: var(--color-foreground);
   }
 }
+
+/* ============ GCM Porto Velho 2026 — identidade visual ============ */
+:root {
+  --radius: 0.75rem;
+
+  --navy: oklch(0.28 0.098 259);          /* #062B5C */
+  --navy-deep: oklch(0.23 0.085 259);
+  --navy-soft: oklch(0.36 0.105 257);
+  --brand-blue: oklch(0.42 0.125 254);    /* #0B4F91 */
+  --sky: oklch(0.955 0.018 244);          /* #EAF2FA */
+  --gold: oklch(0.79 0.142 85);           /* #E7B52D */
+  --gold-deep: oklch(0.70 0.135 78);
+
+  --background: oklch(1 0 0);
+  --foreground: var(--navy);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--navy);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--navy);
+  --primary: var(--navy);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--sky);
+  --secondary-foreground: var(--brand-blue);
+  --muted: oklch(0.975 0.004 250);        /* #F5F7FA */
+  --muted-foreground: oklch(0.50 0.032 257); /* #475569 */
+  --accent: var(--gold);
+  --accent-foreground: var(--navy-deep);
+  --border: oklch(0.918 0.012 250);
+  --input: oklch(0.918 0.012 250);
+  --ring: var(--brand-blue);
+
+  --shadow-soft: 0 1px 2px oklch(0.28 0.098 259 / 0.04), 0 8px 24px oklch(0.28 0.098 259 / 0.07);
+  --shadow-lift: 0 2px 4px oklch(0.28 0.098 259 / 0.06), 0 18px 40px oklch(0.28 0.098 259 / 0.14);
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-navy-soft: var(--navy-soft);
+  --color-brand-blue: var(--brand-blue);
+  --color-sky: var(--sky);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-sans: "Source Sans 3", system-ui, sans-serif;
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lift: var(--shadow-lift);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+@utility reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
