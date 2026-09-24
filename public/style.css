@@ -42,3 +42,64 @@
   .women-carousel:before,.women-carousel:after{width:5vw}
 }
 @media(prefers-reduced-motion:reduce){.women-track{animation:none}}
+
+/* v5 — showcase premium inspirado no layout aprovado */
+.curiosity-showcase{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% -10%,rgba(255,255,255,.96) 0%,rgba(255,248,236,.94) 32%,rgba(248,232,207,.96) 72%,rgba(242,221,190,.98) 100%);
+  border-top:1px solid rgba(184,136,73,.14);
+  border-bottom:1px solid rgba(184,136,73,.14);
+}
+.curiosity-showcase:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.22;
+  background-image:
+    radial-gradient(circle at 16% 24%,rgba(175,115,55,.13) 0 1px,transparent 1.3px),
+    radial-gradient(circle at 72% 68%,rgba(175,115,55,.10) 0 1px,transparent 1.4px);
+  background-size:28px 28px,34px 34px;
+}
+.curiosity-showcase .wrap{position:relative;z-index:2}
+.curiosity-showcase h2{
+  max-width:900px;
+  margin:0 auto 10px;
+  font-size:54px;
+  color:#5d1522;
+  text-shadow:0 1px 0 rgba(255,255,255,.7);
+}
+.curiosity-showcase h2 em{color:#6f1d2e}
+.curiosity-showcase .curiosity-intro{
+  color:#7a5635;
+  font-family:"Cormorant Garamond",serif;
+  font-size:24px;
+  line-height:1.2;
+  max-width:760px;
+  margin:0 auto 22px;
+}
+.ornament-line{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 14px;max-width:360px;color:#c48a2f}
+.ornament-line span{height:1px;flex:1;background:linear-gradient(90deg,transparent,#c48a2f 35%,#c48a2f 65%,transparent)}
+.ornament-line b{font-size:14px;font-weight:400}
+.curiosity-showcase .women-carousel{margin:10px 0 0;padding:18px 0 28px}
+.curiosity-showcase .women-carousel:before{background:linear-gradient(90deg,#f8ead5 0%,rgba(248,234,213,0) 100%)}
+.curiosity-showcase .women-carousel:after{background:linear-gradient(270deg,#f8ead5 0%,rgba(248,234,213,0) 100%)}
+.curiosity-showcase .women-set{gap:18px;padding-right:18px}
+.curiosity-showcase .women-set img{
+  width:310px;
+  border-radius:18px;
+  border:1px solid rgba(178,121,54,.28);
+  box-shadow:0 20px 44px rgba(102,63,31,.18),0 2px 0 rgba(255,255,255,.75) inset;
+}
+@media(max-width:760px){
+  .curiosity-showcase{padding-top:48px;padding-bottom:34px}
+  .curiosity-showcase h2{font-size:38px;line-height:1.02}
+  .curiosity-showcase .curiosity-intro{font-size:20px;padding:0 10px;margin-bottom:12px}
+  .ornament-line{max-width:240px;margin-bottom:10px}
+  .curiosity-showcase .women-carousel{padding:10px 0 16px;margin-top:4px}
+  .curiosity-showcase .women-set{gap:12px;padding-right:12px}
+  .curiosity-showcase .women-set img{width:78vw;max-width:310px;border-radius:16px}
+  .curiosity-showcase .women-track{animation-duration:32s}
+}
