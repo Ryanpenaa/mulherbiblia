@@ -136,3 +136,12 @@
   .forwho h2{font-size:36px}
   .forwho h2 em{color:#f4c984}
 }
+
+/* v7 — oferta principal */
+.offerbox>div:last-child>p{max-width:650px;color:#65584f;font-size:16px;line-height:1.65;margin:0 0 20px}
+.old{color:#766b63;font-size:15px;margin-top:4px}
+.old span{color:#5e5048;text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:#8b263f;font-weight:700}
+@media(max-width:760px){
+  .offerbox>div:last-child>p{font-size:15px;line-height:1.58;margin-bottom:18px}
+  .old{font-size:14px}
+}
