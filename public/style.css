@@ -103,3 +103,36 @@
   .curiosity-showcase .women-set img{width:78vw;max-width:310px;border-radius:16px}
   .curiosity-showcase .women-track{animation-duration:32s}
 }
+
+/* v6 — melhora contraste da seção APRENDA NO SEU RITMO */
+.forwho{
+  background:
+    radial-gradient(circle at 15% 10%,rgba(140,71,84,.22),transparent 30%),
+    linear-gradient(135deg,#2f1219 0%,#421823 52%,#2a1017 100%);
+}
+.forwho .eyebrow{
+  color:#e4bd78;
+}
+.forwho h2{
+  color:#fff8ef;
+  text-shadow:0 2px 18px rgba(0,0,0,.18);
+}
+.forwho h2 em{
+  color:#f1c27d;
+  text-shadow:0 2px 18px rgba(0,0,0,.22);
+}
+.forwho p{
+  color:#eadfd8;
+}
+.forwho .checklist{
+  background:rgba(255,250,243,.97);
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+  border:1px solid rgba(232,191,126,.24);
+}
+.forwho .checklist p{
+  color:#3a2925;
+}
+@media(max-width:760px){
+  .forwho h2{font-size:36px}
+  .forwho h2 em{color:#f4c984}
+}
