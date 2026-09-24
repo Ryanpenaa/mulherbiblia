@@ -23,3 +23,22 @@
   .curiosity-intro{font-size:15px;margin-bottom:22px}
 }
 .hero-offer{display:none!important}
+/* v4 — carrossel infinito da seção 2 */
+.women-carousel{width:100%;overflow:hidden;margin:30px 0 22px;position:relative;padding:18px 0}
+.women-carousel:before,.women-carousel:after{content:"";position:absolute;top:0;bottom:0;width:7vw;z-index:3;pointer-events:none}
+.women-carousel:before{left:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,0) 100%)}
+.women-carousel:after{right:0;background:linear-gradient(270deg,#fff 0%,rgba(255,255,255,0) 100%)}
+.women-track{display:flex;width:max-content;animation:womenLoop 34s linear infinite;will-change:transform}
+.women-set{display:flex;gap:22px;padding-right:22px}
+.women-set img{display:block;width:290px;height:auto;flex:0 0 auto;border-radius:16px;box-shadow:0 16px 38px rgba(77,45,29,.15);border:1px solid rgba(137,91,50,.13)}
+.women-carousel:hover .women-track{animation-play-state:paused}
+.carousel-caption{margin-top:2px}
+@keyframes womenLoop{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:760px){
+  .women-carousel{margin:20px 0 16px;padding:10px 0}
+  .women-set{gap:14px;padding-right:14px}
+  .women-set img{width:76vw;max-width:300px;border-radius:13px;box-shadow:0 12px 26px rgba(77,45,29,.14)}
+  .women-track{animation-duration:27s}
+  .women-carousel:before,.women-carousel:after{width:5vw}
+}
+@media(prefers-reduced-motion:reduce){.women-track{animation:none}}
