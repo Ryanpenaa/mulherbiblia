@@ -1,24 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { BiblePage } from "@/components/landing/bible-page";
+import { images } from "@/components/landing/bible-images";
+import bibleCss from "@/components/landing/bible.css?url";
+import interFont from "@/assets/inter-latin.woff2?url";
+import titleFont from "@/assets/cormorant-latin.woff2?url";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Mulheres da Bíblia | Guia Visual" },
+      { name: "description", content: "Conheça histórias, ensinamentos e referências das Mulheres da Bíblia em um guia visual ilustrado. Material digital por R$ 12,90." },
+      { property: "og:title", content: "Mulheres da Bíblia — Guia Visual" },
+      { property: "og:description", content: "Histórias, ensinamentos e reflexões para fortalecer sua caminhada. Conheça o guia visual ilustrado das Mulheres da Bíblia." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "stylesheet", href: bibleCss },
+      { rel: "preload", as: "image", href: images.mk.src, imageSrcSet: images.mk.srcSet, imageSizes: "(max-width: 760px) 109vw, 760px", fetchPriority: "high" },
+      { rel: "preload", as: "font", type: "font/woff2", href: titleFont, crossOrigin: "anonymous" },
+      { rel: "preload", as: "font", type: "font/woff2", href: interFont, crossOrigin: "anonymous" },
+    ],
+  }),
+  component: BiblePage,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
