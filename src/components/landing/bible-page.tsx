@@ -13,6 +13,17 @@ function CheckoutLink({ children, className }: { children: ReactNode; className?
 
 export function BiblePage() {
   useEffect(() => {
+    const carousel = document.querySelector(".women-carousel");
+    if (!carousel) return;
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      carousel.querySelectorAll("img").forEach((image) => { image.loading = "eager"; });
+      observer.disconnect();
+    }, { rootMargin: "300px" });
+    observer.observe(carousel);
+    return () => observer.disconnect();
+  }, []);
+  useEffect(() => {
     const w = window as PixelWindow;
     if (w.fbq) return;
     const pixel: Pixel = (...args) => {
