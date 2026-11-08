@@ -152,4 +152,22 @@
 
 .hero-mockup img,.offer-mock img{aspect-ratio:4/3}.material-image{aspect-ratio:3/2}.women-set img{aspect-ratio:1122/1402;object-fit:contain}.cta{height:auto;white-space:normal;letter-spacing:0}.fee-note{color:var(--bible-fee);font-weight:800;margin:10px 0 8px;text-transform:uppercase}h1,h2,h3{letter-spacing:0}.cta:focus-visible,summary:focus-visible{outline:3px solid var(--bible-focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){:scope{scroll-behavior:auto}}
 
+
+/* CRO: leitura mais clara e carrossel manual acessível, mantendo a identidade visual */
+.emotional,.confidence{text-align:center;background:#fffaf2}
+.emotional p,.confidence p{max-width:680px;margin:0 auto;color:#695b52;font-size:17px;line-height:1.7}
+.emotional h2,.confidence h2{font-size:43px}
+.swipe-hint{font:600 12px Inter,Arial,sans-serif;color:#7a5635;margin:4px 0 0}
+.women-carousel{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#bd9561 transparent}
+.women-carousel:before,.women-carousel:after{display:none}
+.women-track{width:max-content;animation:none!important;will-change:auto;gap:18px;padding:0 max(20px,calc((100vw - 1120px)/2))}
+.women-card-button{border:0;background:transparent;padding:0;cursor:zoom-in;display:block;flex:0 0 auto;scroll-snap-align:center;border-radius:18px}
+.women-card-button img{display:block;width:310px;height:auto;aspect-ratio:1122/1402;object-fit:contain;border-radius:18px;box-shadow:0 16px 32px rgba(74,39,25,.17)}
+.women-card-button:focus-visible{outline:3px solid #76283c;outline-offset:5px}
+.card-lightbox{position:fixed;inset:0;z-index:9999;background:rgba(27,17,18,.88);display:flex;align-items:center;justify-content:center;padding:22px}
+.card-lightbox-inner{position:relative;max-width:min(92vw,620px);max-height:94dvh}
+.card-lightbox img{display:block;max-width:100%;max-height:90dvh;width:auto;height:auto;object-fit:contain;border-radius:9px}
+.lightbox-close{position:absolute;right:0;top:-42px;background:#fff;color:#3f1623;border:0;border-radius:50%;height:36px;width:36px;font-size:27px;line-height:1;cursor:pointer}
+@media(max-width:760px){.emotional h2,.confidence h2{font-size:33px}.emotional p,.confidence p{font-size:15px}.women-track{padding:0 11vw;gap:12px}.women-card-button img{width:78vw;max-width:310px}}
+
 }
