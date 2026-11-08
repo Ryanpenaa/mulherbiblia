@@ -248,7 +248,7 @@
 .plan-old s{font-size:18px;font-weight:800;color:#7d2137;text-decoration-thickness:2px}
 .plan-price{font-size:49px;color:#76283c;font-weight:900;line-height:1.1;margin:5px 0}
 .plan-payment{font-size:13px;font-weight:700;color:#65584f}
-.plan-card ul{padding:0;margin:25px 0 12px;list-style:none;display:grid;gap:13px;flex:1}
+.plan-card ul{padding:0;margin:20px 0 12px;list-style:none;display:grid;gap:10px;flex:1;align-content:start;grid-auto-rows:max-content}
 .plan-card li{position:relative;padding-left:25px;color:#453a35;font-size:14px;line-height:1.45}
 .plan-card li:before{content:"✓";position:absolute;top:0;left:0;font-weight:900;color:#71834b}
 .plan-card .fee-note,.plan-bonus-label{margin:10px 0;color:#b52537;font-size:12px;font-weight:800}
