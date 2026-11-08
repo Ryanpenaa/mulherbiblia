@@ -13,6 +13,10 @@ function CheckoutLink({ children, className }: { children: ReactNode; className?
 
 export function BiblePage() {
   const [expandedCard, setExpandedCard] = useState<{src: string; name: string} | null>(null);
+  const [todayLabel, setTodayLabel] = useState("");
+  useEffect(() => {
+    setTodayLabel(new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "America/Sao_Paulo" }).format(new Date()));
+  }, []);
   const cards = [
     { name: "Ester", image: images.ESTER2 },
     { name: "Rute", image: images.RUTE2 },
@@ -52,7 +56,7 @@ export function BiblePage() {
   }, []);
   return <div className="bible-landing">
 
-<div className="offer-topbar"><span>CONDIÇÃO ESPECIAL PARA O GUIA VISUAL</span><strong>Plano Básico por R$ 12,90</strong><a href="#oferta">Ver planos</a></div><header className="hero"><div className="wrap hero-inner"><span className="eyebrow">GUIA VISUAL • MULHERES DA BÍBLIA</span><h1>Descubra as histórias de <em>mulheres que marcaram a Bíblia</em> e os ensinamentos que elas deixaram para nós</h1><div className="hero-mockup"><div className="hero-glow"></div><img src={images.mk.src} alt="Mockup original do Guia Visual Mulheres da Bíblia" loading="eager" srcSet={images.mk.srcSet} width="960" height="720" decoding="async" fetchPriority="high" sizes="(max-width: 760px) 109vw, 760px" /></div><p className="hero-sub">Um guia ilustrado, fácil de acompanhar e com referências bíblicas para aprofundar suas leituras.</p><CheckoutLink className="cta hero-cta">QUERO CONHECER AS MULHERES DA BÍBLIA</CheckoutLink><div className="trust hero-trust">✓ Acesso digital   •   ✓ Pagamento único   •   ✓ Compra segura</div></div></header>
+<div className="offer-topbar"><span>CONDIÇÃO ESPECIAL PARA O GUIA VISUAL {todayLabel && <span className="offer-date">• {todayLabel}</span>}</span><strong>Plano Básico por R$ 12,90</strong><a href="#oferta">Ver planos</a></div><header className="hero"><div className="wrap hero-inner"><span className="eyebrow">GUIA VISUAL • MULHERES DA BÍBLIA</span><h1>Descubra as histórias de <em>mulheres que marcaram a Bíblia</em> e os ensinamentos que elas deixaram para nós</h1><div className="hero-mockup"><div className="hero-glow"></div><img src={images.mk.src} alt="Mockup original do Guia Visual Mulheres da Bíblia" loading="eager" srcSet={images.mk.srcSet} width="960" height="720" decoding="async" fetchPriority="high" sizes="(max-width: 760px) 109vw, 760px" /></div><p className="hero-sub">Um guia ilustrado, fácil de acompanhar e com referências bíblicas para aprofundar suas leituras.</p><CheckoutLink className="cta hero-cta">QUERO CONHECER AS MULHERES DA BÍBLIA</CheckoutLink><div className="trust hero-trust">✓ Acesso digital   •   ✓ Pagamento único   •   ✓ Compra segura</div></div></header>
 
 <main>
 <section className="section emotional"><div className="wrap emotional-layout"><div className="emotional-heading"><span className="eyebrow">ALÉM DOS NOMES, EXISTEM HISTÓRIAS</span><h2>Mulheres que viveram desafios. <em>Histórias que ainda têm muito a ensinar.</em></h2></div><div className="emotional-detail"><span className="emotional-rule" aria-hidden="true"></span><p>Coragem nas decisões de Ester. Lealdade na jornada de Rute. Perseverança na oração de Ana. Liderança na história de Débora.</p><p className="emotional-conclusion">Conheça essas trajetórias, seus contextos e as passagens bíblicas em um guia ilustrado feito para consultar com tranquilidade.</p><div className="emotional-footnote">Conheça alguns dos cards logo abaixo <span aria-hidden="true">↓</span></div></div></div></section>
