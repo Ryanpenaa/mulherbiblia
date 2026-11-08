@@ -257,4 +257,40 @@
 .plan-note{text-align:center;font-size:12px;color:#817267;margin-top:9px}
 @media(max-width:760px){.offer-topbar{gap:4px 12px;padding:8px 12px;font-size:11px}.offer-topbar strong{font-size:11px}.bonuses h2,.plans-heading h2{font-size:34px}.bonus-grid,.plans-grid{grid-template-columns:1fr;gap:14px}.bonus-item{display:grid;grid-template-columns:120px minmax(0,1fr);align-items:stretch}.bonus-item>img{height:100%;min-height:190px;padding:8px}.bonus-content{padding:16px 14px}.bonus-content h3{font-size:26px}.bonus-content p{font-size:13px;min-height:0}.bonus-reference{margin-top:10px;font-size:11px}.bonus-reference s{font-size:14px}.bonus-total{gap:10px;padding:18px}.bonus-total strong{font-size:32px}.plan-card{padding:23px}.plan-card--complete{padding:22px}.plan-highlight{margin:-22px -22px 20px}.plan-card h3{font-size:36px}.plan-price{font-size:44px}}
 
+/* Destaque visual principal para a oferta completa */
+.offer-plans .plans-grid{align-items:stretch;gap:25px}
+.offer-plans .plan-card--complete{
+  border:3px solid #982c49;
+  padding:28px;
+  background:linear-gradient(165deg,#fff8e8 0%,#fffdf8 56%,#fff3e3 100%);
+  box-shadow:0 20px 55px rgba(92,26,49,.20),0 0 0 5px rgba(152,44,73,.06);
+  transform:scale(1.025);
+  z-index:1
+}
+.offer-plans .plan-card--complete .plan-highlight{
+  background:linear-gradient(90deg,#6c1632,#a52b4d,#6c1632);
+  margin:-28px -28px 24px;
+  padding:15px 10px;
+  font-size:13px;
+  border-radius:13px 13px 0 0;
+  letter-spacing:.08em
+}
+.offer-plans .plan-card--complete h3{color:#782039;font-size:45px}
+.offer-plans .plan-card--complete .plan-price{font-size:58px;color:#8a1d40}
+.offer-plans .plan-card--complete .plan-cta{background:#8d2142;color:#fff;border-color:#8d2142;font-size:15px;font-weight:800;box-shadow:0 7px 18px rgba(107,20,49,.19)}
+.offer-plans .plan-card--complete .plan-cta:hover{background:#6f1733}
+.offer-plans .plan-card--complete ul{gap:12px}
+.offer-plans .plan-bonus-divider{margin-top:9px;padding:12px 10px!important;text-align:center;background:#f6e5d7;border:1px solid #e6c0ac;border-radius:9px;color:#79213a;font-weight:900;font-size:12px;letter-spacing:.04em}
+.offer-plans .plan-bonus-divider:before{display:none}
+.offer-plans .plan-bonus-item{font-weight:600;color:#66243a}
+.offer-plans .plan-bonus-item:before{color:#a32b48}
+.offer-plans .plan-card--complete .plan-bonus-label{font-weight:900;background:#fce5e5;border-radius:8px;padding:9px;text-align:center}
+@media(max-width:760px){
+ .offer-plans .plans-grid{gap:25px}
+ .offer-plans .plan-card--complete{transform:none;padding:20px;border-width:3px}
+ .offer-plans .plan-card--complete .plan-highlight{margin:-20px -20px 21px}
+ .offer-plans .plan-card--complete h3{font-size:38px}
+ .offer-plans .plan-card--complete .plan-price{font-size:49px}
+}
+
 }
