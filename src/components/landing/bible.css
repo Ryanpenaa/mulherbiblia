@@ -196,4 +196,19 @@
  .curiosity-showcase .women-carousel--reverse .women-track{animation:none!important}
 }
 
+
+/* Apresentação editorial compacta antes dos carrosséis */
+.emotional{padding:68px 0;background:#fffaf2;text-align:left}
+.emotional-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:clamp(24px,6vw,90px);max-width:1020px}
+.emotional .eyebrow{color:#9b754d;font-size:11px;letter-spacing:.12em;margin-bottom:18px}
+.emotional h2{font-size:clamp(35px,3.7vw,52px);line-height:1.08;margin:0;color:#3e1b25}
+.emotional h2 em{display:block;color:#76283c;margin-top:5px}
+.emotional-detail{padding-top:8px}
+.emotional-rule{display:block;width:56px;height:2px;background:#b48a58;margin-bottom:20px}
+.emotional .emotional-detail p{font-size:16px;line-height:1.7;color:#665a51;margin:0 0 14px;max-width:460px}
+.emotional .emotional-detail .emotional-conclusion{font-size:15px;color:#75685f}
+.emotional-footnote{display:flex;align-items:center;gap:10px;color:#76283c;font-size:12px;font-weight:700;letter-spacing:.03em;margin-top:23px}
+.emotional-footnote span{font-size:20px;line-height:1}
+@media(max-width:760px){.emotional{padding:45px 0 37px}.emotional-layout{grid-template-columns:1fr;gap:19px}.emotional .eyebrow{font-size:10px;margin-bottom:12px}.emotional h2{font-size:35px}.emotional h2 em{margin-top:4px}.emotional-rule{margin-bottom:15px}.emotional .emotional-detail p{font-size:15px;line-height:1.58;margin-bottom:10px}.emotional .emotional-detail .emotional-conclusion{font-size:14px}.emotional-footnote{margin-top:17px}}
+
 }
